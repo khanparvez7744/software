@@ -1,0 +1,53 @@
+.cls-4 {
+    fill: #636262
+}
+
+.cls-10, .cls-6 {
+    stroke: #ffffff;
+    fill: #636262;
+}
+
+.cls-3 {
+    fill: #ff9d2d;
+}
+
+.cls-7 {
+    fill: #cfcfcf;
+    stroke: #000000;
+}
+
+.cls-9 {
+    fill: #919EAB;
+    cursor: pointer;
+}
+
+.cls-9.selected {
+    fill: green; /* Selected fill color */
+    cursor: pointer;
+}
+
+.cls-2-hide {
+    fill: #ffffff;
+    display: none;
+}
+
+.cls-2-show {
+    fill: #ffffff;
+}
+
+.cls-5 {
+    stroke: #000000;
+    fill: #cfcfcf;
+}
+
+.cls-1 {
+    fill: #fb6d38;
+}
+
+.cls-8 {
+    fill: #212B36;
+}
+
+.cls-10 {
+    fill: #636262;
+}

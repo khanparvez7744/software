@@ -1,0 +1,8 @@
+@keyframes rids {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 70px;
+    }
+}

@@ -1,0 +1,20 @@
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Customize the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(99, 115, 129, 0.4);
+    border-radius: 8px;
+}
+
+/* Customize the scrollbar track on hover */
+::-webkit-scrollbar-track:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Customize the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(99, 115, 129, 0.8);
+}

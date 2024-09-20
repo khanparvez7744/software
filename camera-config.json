@@ -1,0 +1,227 @@
+{
+  "server": {
+    "httpPort": 8000,
+    "httpsPort": 8001,
+    "encoderPort": ":8002",
+    "iceServers": [],
+    "webrtcMinPort": 32768,
+    "webrtcMaxPort": 65535,
+    "retryConnectSec": 10,
+    "startStreamServer": true
+  },
+  "streams": {
+    "svdgs-001": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.2.29:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs2": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.2.49:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs3": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.2.51:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs4": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.2.53:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs5": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.112:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs6": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.113:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs7": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.114:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs8": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.115:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs9": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.116:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs10": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.117:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs11": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.118:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs12": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.119:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs13": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.120:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs14": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.121:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs15": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.122:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs16": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.123:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs17": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.124:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs18": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.125:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs19": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.126:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs20": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.127:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs21": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.128:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs22": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.129:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs23": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.130:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs24": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.131:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs25": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.132:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs26": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs27": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs28": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.135:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs29": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.136:554/cam/realmonitor?channel=1&subtype=0"
+    },
+    "svdgs30": {
+      "VOD": false,
+      "disableAudio": true,
+      "debug": false,
+      "url": "rtsp://admin:Sach@151084!@192.168.1.137:554/cam/realmonitor?channel=1&subtype=0"
+    }
+  },
+  "client": {
+    "debug": true,
+    "defaultStream1": "SVDGS046",
+    "defaultStream2": "SVDGS048",
+    "defaultStream3": "SVDGS049",
+    "defaultStream4": "SVDGS055",
+    "defaultStream5": "svdgs5",
+    "defaultStream6": "svdgs6",
+    "defaultStream7": "svdgs7",
+    "defaultStream8": "svdgs8",
+    "defaultStream9": "svdgs9",
+    "defaultStream10": "svdgs10",
+    "defaultStream11": "svdgs11",
+    "defaultStream12": "svdgs12",
+    "defaultStream13": "svdgs13",
+    "defaultStream14": "svdgs14",
+    "defaultStream15": "svdgs15",
+    "defaultStream16": "svdgs16",
+    "defaultStream17": "svdgs17",
+    "defaultStream18": "svdgs18",
+    "defaultStream19": "svdgs19",
+    "defaultStream20": "svdgs20",
+    "defaultStream21": "svdgs21",
+    "defaultStream22": "svdgs22",
+    "defaultStream23": "svdgs23",
+    "defaultStream24": "svdgs24",
+    "defaultStream25": "svdgs25",
+    "defaultStream26": "svdgs26",
+    "defaultStream27": "svdgs27",
+    "defaultStream28": "svdgs28",
+    "defaultStream29": "svdgs29",
+    "defaultStream30": "svdgs30"
+  }
+}

@@ -1,0 +1,18 @@
+why delay
+---------
+RIDS HTML to React Conversion - I mistakenly believed that HTML would function seamlessly within MUI. Therefore, I directly integrated HTML code into the MUI Code.
+
+RIDS Status Update Screen Change - My lack of familiarity with web sockets hindered my ability to implement the necessary changes to the status update screen.
+
+Modal Height Bug on System Setting Component - I overlooked the potential of using the useState hook to address the modal height issue, resulting in a delay in resolving the problem.
+
+SVG Dashboard Bug - Despite extensive research, I have been unable to find a satisfactory solution for the SVG dashboard bug.
+
+constraint
+----------
+My lack of knowledge of web sockets and MUI has significantly prolonged the development process.
+
+overcome
+---------
+Please provide guidance or hints for the SVG dashboard so I can begin researching in that direction and resolve the bug as promptly as possible.
+

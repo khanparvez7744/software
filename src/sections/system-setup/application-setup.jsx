@@ -1,0 +1,134 @@
+import { toast } from 'sonner';
+import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import Autocomplete from '@mui/material/Autocomplete';
+
+import { SERVER_IP } from '../../../config';
+
+export default function ApplicationSetup({ onNext }) {
+  const [airportName, setAirportName] = useState('');
+  const [airportCode, setAirportCode] = useState('');
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('');
+
+  const userId = ((JSON.parse(sessionStorage.getItem('userData'))).userId).toString();
+
+  useEffect(() => {
+    fetch(`${SERVER_IP}/api/countries/get-countries`)
+      .then(response => response.json())
+      .then(data => {
+        setCountries(data);
+      })
+      .catch(error => {
+        console.error('Error fetching countries:', error);
+      });
+    fetch(`${SERVER_IP}/api/config/get-application-settings`)
+      .then(response => response.json())
+      .then(data => {
+        setAirportName(data.airport_name);
+        setAirportCode(data.airport_code);
+        setSelectedCountry(data.country_id);
+      })
+      .catch(error => {
+        console.error('Error fetching countries:', error);
+      });
+
+  }, []);
+
+  const handleSave = () => {
+
+    const apiEndpoint = `${SERVER_IP}/api/config/save-application-settings`;
+
+    if (!airportName || !airportCode || !selectedCountry) {
+      toast.error('Please fill the required fields.');
+      return;
+    }
+
+    fetch(`${apiEndpoint}`, {
+      method: 'POST', headers: {
+        'Content-Type': 'application/json',
+      }, body: JSON.stringify({
+        userId, airportName, airportCode, countryId: selectedCountry,
+      }),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        toast.success(data.message);
+        onNext();
+      })
+      .catch(error => {
+        toast.error('Error saving/updating settings.');
+      });
+  };
+
+  return (<Stack justifyContent="center" sx={{ height: 500 }}>
+    <Grid
+      sx={{
+        display: 'flex', justifyContent: 'space-between', p: (theme) => theme.spacing(5, 5, 5, 5),
+      }}
+      container
+      spacing={5}
+    >
+      <Grid item xs={12} sm={12}>
+        <TextField fullWidth name="airportName" label="Airport Name" value={airportName}
+                   onChange={(e) => setAirportName(e.target.value)} inputProps={{
+          maxLength: 250,
+        }} required />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <FormControl fullWidth required>
+          <Autocomplete
+            id="country-label"
+            options={countries}
+            getOptionLabel={(option) => option.name}
+            renderInput={(params) => <TextField {...params} label="Country" />}
+            value={selectedCountry ? countries.find(country => country.id === selectedCountry) : null}
+            onChange={(event, newValue) => {
+              setSelectedCountry(newValue ? newValue.id : '');
+            }}
+            sx={{
+              '& .MuiAutocomplete-paper': {
+                backgroundColor: 'lightblue', // Change the dropdown background color
+              },
+              '& .MuiAutocomplete-option': {
+                '&[aria-selected="true"]': {
+                  backgroundColor: 'lightgreen', // Change the selected option background color
+                },
+              },
+            }}
+          />
+        </FormControl>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField fullWidth name="airportCode" label="Airport Code" value={airportCode}
+                   onChange={(e) => setAirportCode(e.target.value)} inputProps={{
+          maxLength: 20,
+        }} required />
+      </Grid>
+      <Grid item xs={12} mt={2} sx={{
+        position: 'absolute', bottom: 0, left: 0, right: 0, p: 5,
+      }}>
+        <Stack direction="row" alignItems="center" justifyContent="center" spacing={2}>
+          <Button variant="contained" color="inherit" onClick={handleSave}>
+            Save
+          </Button>
+        </Stack>
+      </Grid>
+    </Grid>
+  </Stack>);
+}
+
+ApplicationSetup.propTypes = {
+  onNext: PropTypes.func.isRequired,
+};

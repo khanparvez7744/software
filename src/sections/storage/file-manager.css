@@ -1,0 +1,21 @@
+.file-manager {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.file-item .icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
