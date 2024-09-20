@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+
+<head>
   <head>
     <meta charset="utf-8" />
     <meta name="theme-color" content="#000000" />
